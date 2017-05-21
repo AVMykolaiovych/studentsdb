@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Сервіс обліку студентів</title>
     <!-- Bootstrap -->
-    <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link href="/static/libs/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
     <div class="container">
         <div class="row" id="header">
-            <div class="col-xs-8">
+            <div class="col-sm-8">
                 <h1>Сервіс Обліку Студентів</h1>
             </div>
-            <div class="col-xs-4" id="group-selector">
+            <div class="col-sm-4" id="group-selector">
                 <strong>Група:</strong>
-                <select class="chosen-select">
+                <select>
                     <option value="">Усі студенти</option>
                     <option value="">МтМ-21, Подоба Віталій (№254)</option>
                     <option value="">МтМ-24, Корост Андрій (№2123)</option>
@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="row" id="sub-header">
-            <div class="col-xs-12">
+            <div class="col-sm-12">
                 <ul class="nav nav-tabs" role="tablist">
                     <li role="presentation" class="active"><a href="{% url 'home' %}">Студенти</a></li>
                     <li role="presentation"><a href="/journal">Відвідування</a></li>
@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="row" id="content-columns">
-            <div class="col-xs-12" id="content-column">
+            <div class="col-sm-12" id="content-column">
                 <div class="alert alert-warning">
                     Зміни скасовано
                 </div>
@@ -54,9 +54,9 @@
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td><img class="img-circle" src="img/1.jpg" alt="1"></td>
-                            <td><a title="Редагувати" href="{% 'students_edit' 1 %}">Корост</a></td>
-                            <td><a title="Редагувати" href="{% 'students_edit' 1 %}">Андрій</a></td>
+                            <td><img class="img-circle" src="/static/img/1.jpg" alt="1"></td>
+                            <td><a title="Редагувати" href="{% url 'students_edit' 1 %}">Корост</a></td>
+                            <td><a title="Редагувати" href="{% url 'students_edit' 1 %}">Андрій</a></td>
                             <td>2123</td>
                             <td>
                                 <div class="dropdown">
@@ -66,17 +66,17 @@
                                     </button>
                                     <ul class="dropdown-menu" role="menu">
                                         <li role="presentation"><a role="menuitem" tabindex="-1" href="/journal/1">Відвідування</a></li>
-                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="{% 'students_edit' 1 %}">Редагувати</a></li>
-                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="{% 'students_delete' 1 %}">Видалити</a></li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="{% url 'students_edit' 1 %}">Редагувати</a></li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="{% url 'students_delete' 1 %}">Видалити</a></li>
                                     </ul>
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td><img class="img-circle" src="img/2.jpg" alt="1"></td>
-                            <td><a title="Редагувати" href="{% 'students_edit' 1 %}">Бондарчук</a></td>
-                            <td><a title="Редагувати" href="{% 'students_edit' 1 %}">Богдан</a></td>
+                            <td><img class="img-circle" src="/static/img/2.jpg" alt="1"></td>
+                            <td><a title="Редагувати" href="{% url 'students_edit' 1 %}">Бондарчук</a></td>
+                            <td><a title="Редагувати" href="{% url 'students_edit' 1 %}">Богдан</a></td>
                             <td>2345</td>
                             <td>
                                 <div class="dropdown">
@@ -86,17 +86,17 @@
                                     </button>
                                     <ul class="dropdown-menu" role="menu">
                                         <li role="presentation"><a role="menuitem" tabindex="-1" href="/journal/1">Відвідування</a></li>
-                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="{% 'students_edit' 1 %}">Редагувати</a></li>
-                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="{% 'students_delete' 1 %}">Видалити</a></li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="{% url 'students_edit' 1 %}">Редагувати</a></li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="{% url 'students_delete' 1 %}">Видалити</a></li>
                                     </ul>
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td><img class="img-circle" src="img/3.jpg" alt="1"></td>
-                            <td><a title="Редагувати" href="{% 'students_edit' 1 %}">Демиденко</a></td>
-                            <td><a title="Редагувати" href="{% 'students_edit' 1 %}">Олександр</a></td>
+                            <td><img class="img-circle" src="/static/img/3.jpg" alt="1"></td>
+                            <td><a title="Редагувати" href="{% url 'students_edit' 1 %}">Демиденко</a></td>
+                            <td><a title="Редагувати" href="{% url 'students_edit' 1 %}">Олександр</a></td>
                             <td>2346</td>
                             <td>
                                 <div class="dropdown">
@@ -106,8 +106,8 @@
                                     </button>
                                     <ul class="dropdown-menu" role="menu">
                                         <li role="presentation"><a role="menuitem" tabindex="-1" href="/journal/1">Відвідування</a></li>
-                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="{% 'students_edit' 1 %}">Редагувати</a></li>
-                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="{% 'students_delete' 1 %}">Видалити</a></li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="{% url 'students_edit' 1 %}">Редагувати</a></li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="{% url 'students_delete' 1 %}">Видалити</a></li>
                                     </ul>
                                 </div>
                             </td>
@@ -128,16 +128,16 @@
             </div>
         </div>
         <div class="row" id="footer">
-            <div class="col-xs-12">
+            <div class="col-sm-12">
                 &copy; 2014 Сервіс обліку студентів
             </div>
         </div>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="libs/jquery.min.js"></script>
+    <script src="/static/libs/jquery.min.js"></script>
     <!-- Include all compiled plugins -->
-    <script src="libs/bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/common.js" ></script>
+    <script src="/static/libs/bootstrap/js/bootstrap.js"></script>
+    <script src="/static/js/common.js" ></script>
 </body>
 </html>
