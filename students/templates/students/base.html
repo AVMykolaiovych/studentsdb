@@ -11,7 +11,7 @@
     <title>Сервіс обліку студентів - {% block meta_title %}{% endblock meta_title %}</title>
     <!-- Bootstrap -->
     <link href="{% static 'libs/bootstrap/css/bootstrap.css' %}" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{{ PORTAL_URL }}{% static 'css/styles.css' %}">
 
     {% block extra_css %}{% endblock extra_css %}
 
@@ -35,9 +35,9 @@
         <div class="row" id="sub-header">
             <div class="col-sm-12">
                 <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" {% if request.path=='/' %}class="active"{% endif %}><a href="{% url 'home' %}">Студенти</a></li>
-                    <li role="presentation" {% if '/journal' in request.path %}class="active"{% endif %}><a href="/journal">Відвідування</a></li>
-                    <li role="presentation" {% if '/groups' in request.path %}class="active"{% endif %}><a href="{% url 'groups' %}">Групи</a></li>
+                    <li role="presentation" {% if request.path == '/' %}class="active"{% endif %}><a href="{% url 'home' %}">Студенти</a></li>
+                    <li role="presentation" {% if 'journal' in request.path %}class="active"{% endif %}><a href="/journal">Відвідування</a></li>
+                    <li role="presentation" {% if 'groups' in request.path %}class="active"{% endif %}><a href="{% url 'groups' %}">Групи</a></li>
                 </ul>
             </div>
         </div>
