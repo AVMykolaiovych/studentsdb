@@ -24,7 +24,10 @@ def students_list(request):
          'ticket': 2345,
          'image': 'img/3.jpg'},
     )
-    return render(request, 'students/students_list.html', {'students': students})
+    context = {
+        'students': students
+    }
+    return render(request, 'students/students_list.html', context)
 
 
 def students_add(request):
