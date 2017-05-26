@@ -1,5 +1,3 @@
-# _*_ coding: utf-8 _*_
-
 from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -9,18 +7,18 @@ from django.http import HttpResponse
 def students_list(request):
     students = (
         {'id': 1,
-         'first_name': u'Віталій',
-         'last_name': u'Подоба',
+         'first_name': 'Віталій',
+         'last_name': 'Подоба',
          'ticket': 235,
          'image': 'img/1.jpg'},
         {'id': 2,
-         'first_name': u'Андрій',
-         'last_name': u'Корост',
+         'first_name': 'Андрій',
+         'last_name': 'Корост',
          'ticket': 2123,
          'image': 'img/2.jpg'},
         {'id': 3,
-         'first_name': u'Богдан',
-         'last_name': u'Бондарчук',
+         'first_name': 'Богдан',
+         'last_name': 'Бондарчук',
          'ticket': 2345,
          'image': 'img/3.jpg'},
     )
@@ -45,16 +43,19 @@ def students_delete(request, sid):
 def groups_list(request):
     groups = (
         {'id': 1,
-         'group_name': u'МтМ-21',
-         'group_head': u'Ячменеев Олег'},
+         'group_name': 'МтМ-21',
+         'group_head': 'Ячменеев Олег'},
         {'id': 2,
-         'group_name': u'МтМ-22',
-         'group_head': u'Подоба Віталій'},
+         'group_name': 'МтМ-22',
+         'group_head': 'Подоба Віталій'},
         {'id': 3,
-         'group_name': u'МтМ-23',
-         'group_head': u'Бондарчук Богдан'},
+         'group_name': 'МтМ-23',
+         'group_head': 'Бондарчук Богдан'},
     )
-    return render(request, 'students/groups_list.html', {'groups': groups})
+    context = {
+        'groups': groups
+    }
+    return render(request, 'students/groups_list.html', context)
 
 
 def groups_add(request):
@@ -67,3 +68,9 @@ def groups_edit(request, sid):
 
 def groups_delete(request, sid):
     return HttpResponse('<h1>Delete groups %s</h1>' % sid)
+
+
+def journal_list(request):
+    return render(request, 'students/journal_list.html')
+
+
