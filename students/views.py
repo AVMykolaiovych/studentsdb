@@ -44,13 +44,13 @@ def groups_list(request):
     groups = (
         {'id': 1,
          'group_name': 'МтМ-21',
-         'group_head': 'Ячменеев Олег'},
+         'group_head': {'id': 1, 'name': 'Ячменеев Олег'}},
         {'id': 2,
          'group_name': 'МтМ-22',
-         'group_head': 'Подоба Віталій'},
+         'group_head': {'id': 2, 'name': 'Подоба Віталій'}},
         {'id': 3,
          'group_name': 'МтМ-23',
-         'group_head': 'Бондарчук Богдан'},
+         'group_head': {'id': 3, 'name': 'Бондарчук Богдан'}},
     )
     context = {
         'groups': groups
