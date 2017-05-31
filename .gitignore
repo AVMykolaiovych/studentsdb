@@ -139,3 +139,7 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+students/migrations/0001_initial.py
+students/migrations/0002_auto_20170529_2239.py
+students/static/img/
+students/static/js/
