@@ -7,6 +7,12 @@ from .models import Student
 
 def students_list(request):
     students = Student.objects.all()
+
+    order_by = request.GET.get('order_by', '')
+    if order_by in ('list_number', 'first_name', 'last_name', 'ticket'):
+        students = students.order_by(order_by)
+        if request.GET.get('reverse', '') == '1':
+            students = students.reverse()
     context = {
         'students': students
     }
