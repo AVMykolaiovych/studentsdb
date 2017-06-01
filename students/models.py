@@ -9,6 +9,7 @@ class Student(models.Model):
         verbose_name = 'Студент'
         verbose_name_plural = 'Студенти'
 
+    list_number = models.CharField(max_length=256, blank=False, verbose_name="№")
     first_name = models.CharField(max_length=256, blank=False, verbose_name="Ім'я")
     last_name = models.CharField(max_length=256, blank=False, verbose_name="Прізвище")
     middle_name = models.CharField(max_length=256, blank=True, verbose_name="По-батькові", default='')
