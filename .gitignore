@@ -141,5 +141,6 @@ fabric.properties
 
 students/migrations/0001_initial.py
 students/migrations/0002_auto_20170529_2239.py
+students/migrations/0003_student_list_number.py
 students/static/img/
 students/static/js/
