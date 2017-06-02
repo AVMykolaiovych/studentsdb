@@ -144,3 +144,4 @@ students/migrations/0002_auto_20170529_2239.py
 students/migrations/0003_student_list_number.py
 students/static/img/
 students/static/js/
+students/migrations/0004_remove_student_list_number.py
